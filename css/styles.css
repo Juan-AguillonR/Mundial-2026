@@ -281,11 +281,9 @@ footer {
     font-size: 14px;
 }
 
-/* ===========================
-   SECCIÓN: INFORMACIÓN DE EQUIPOS
-   =========================== */
+/*SECCIÓN: INFORMACIÓN DE EQUIPOS*/
 
-/* Filtro de grupos */
+/*grupos */
 .filter {
     background-color: white;
     padding: 25px;
