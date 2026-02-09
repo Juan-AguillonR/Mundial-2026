@@ -342,7 +342,7 @@ footer {
 
 /* Contenedor de equipos */
 .teams {
-    display: grid;
+    display: grid; /*Cudricula*/
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
     margin-bottom: 40px;
