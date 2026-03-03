@@ -621,19 +621,23 @@ header {
 }
 
 /* Listado de jugadores en dos columnas */
+.team-media-players {
+    display: block;
+}
+
 .player-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    columns: 2; /* dos columnas automáticas */
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    column-gap: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 6px 24px;
+    max-width: 340px;
 }
+
 .player-list li {
     padding: 4px 0;
-    break-inside: avoid-column;
-    -webkit-column-break-inside: avoid;
+    text-align: left;
 }
 
 .player-list .role {
