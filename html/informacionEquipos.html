@@ -12,6 +12,7 @@
     <header>
         <h1>Mundial FIFA 2026</h1>
         <p>Información de los equipos</p>
+        <div class="hamburger">&#9776;</div>
         <nav class="navbar">
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
@@ -1272,6 +1273,29 @@
     <footer>
         <p>&copy; Mundial 2026 - | Cristian - Juan Pablo - Emmanuel</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.navbar');
+            if (hamburger && nav) {
+                hamburger.addEventListener('click', () => {
+                    nav.classList.toggle('open');
+                });
+            }
+            const filterHead = document.querySelector('.filter h2');
+            const filter = document.querySelector('.filter');
+            if (filterHead && filter) {
+                // collapse by default on narrow screens
+                if (window.innerWidth <= 768) {
+                    filter.classList.add('collapsed');
+                }
+                filterHead.addEventListener('click', () => {
+                    filter.classList.toggle('collapsed');
+                });
+            }
+        });
+    </script>
 
 </body>
 

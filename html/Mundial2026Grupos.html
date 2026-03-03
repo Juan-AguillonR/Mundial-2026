@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundial 2026 - Grupos</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -12,6 +13,7 @@
     <header>
         <h1>Mundial FIFA 2026</h1>
         <p>Organización oficial de grupos</p>
+        <div class="hamburger">&#9776;</div>
         <nav class="navbar">
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
@@ -23,9 +25,27 @@
 
     <main>
 
+        <!-- Menú para saltar a grupos similar al de equipos -->
+        <section class="filter">
+            <h2>Ir a un Grupo</h2>
+            <div class="group-links">
+                <a href="#grupoA" class="group-link">Grupo A</a>
+                <a href="#grupoB" class="group-link">Grupo B</a>
+                <a href="#grupoC" class="group-link">Grupo C</a>
+                <a href="#grupoD" class="group-link">Grupo D</a>
+                <a href="#grupoE" class="group-link">Grupo E</a>
+                <a href="#grupoF" class="group-link">Grupo F</a>
+                <a href="#grupoG" class="group-link">Grupo G</a>
+                <a href="#grupoH" class="group-link">Grupo H</a>
+                <a href="#grupoI" class="group-link">Grupo I</a>
+                <a href="#grupoJ" class="group-link">Grupo J</a>
+                <a href="#grupoK" class="group-link">Grupo K</a>
+                <a href="#grupoL" class="group-link">Grupo L</a>
+            </div>
+        </section>
 
         <section class="grupo">
-            <h2>Grupo A</h2>
+            <h2 id="grupoA">Grupo A</h2>
             <table>
                 <thead>
                     <tr>
@@ -821,6 +841,28 @@
     <footer>
         <p>&copy; Mundial 2026 - | Cristian - Juan Pablo - Emmanuel</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.navbar');
+            if (hamburger && nav) {
+                hamburger.addEventListener('click', () => {
+                    nav.classList.toggle('open');
+                });
+            }
+            const filterHead = document.querySelector('.filter h2');
+            const filter = document.querySelector('.filter');
+            if (filterHead && filter) {
+                if (window.innerWidth <= 768) {
+                    filter.classList.add('collapsed');
+                }
+                filterHead.addEventListener('click', () => {
+                    filter.classList.toggle('collapsed');
+                });
+            }
+        });
+    </script>
 
 </body>
 
