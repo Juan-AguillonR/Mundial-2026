@@ -60,6 +60,30 @@ header p {
 .navbar a:hover { /* Para que se pongo de color cuando el cursor está sobre*/
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.hamburger {
+  display:         none;
+  flex-direction:  column;
+  justify-content: center;
+  gap:             5px;
+  border:          none;
+  background: transparent;
+  cursor:          pointer;
+  padding:         0.5rem;
+  z-index:         1001;
+}
+
+.bar {
+  display:       block;
+  width:         25px;
+  height:        3px;
+  border-radius: 3px;
+}
+
+.hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
 .video {
     display: block;
     margin: 0 auto 30px auto;

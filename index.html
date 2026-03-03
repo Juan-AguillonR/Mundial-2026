@@ -12,27 +12,27 @@
     <header>
         <h1>Mundial FIFA 2026</h1>
         <p>Información</p>
-        <div class="hamburger">&#9776;</div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="/index.html" class="active">Inicio</a></li>
                 <li><a href="/html/Mundial2026Grupos.html">Grupos</a></li>
                 <li><a href="/html/informacionEquipos.html">Equipos</a></li>
             </ul>
         </nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false"> ☰ </button>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <main>
-        <video class="video" src="assets/video/MundialColombia.mp4" 
-            autoplay 
-            muted 
-            loop 
-            controls>
+        <video class="video" src="assets/video/MundialColombia.mp4" autoplay muted loop controls>
         </video>
         <!-- Sección de información principal -->
         <section class="info-principal">
             <div class="card">
-                
+
                 <h3>&#x1f4c5; Fechas del Torneo</h3>
                 <p><strong>Inicio:</strong> 12 de junio de 2026</p>
                 <p><strong>Final:</strong> 12 de julio de 2026</p>
@@ -97,18 +97,7 @@
     <footer>
         <p>&copy; Mundial 2026 - | Cristian - Juan Pablo - Emmanuel</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('.navbar');
-            if (hamburger && nav) {
-                hamburger.addEventListener('click', () => {
-                    nav.classList.toggle('open');
-                });
-            }
-        });
-    </script>
+    <script src="/script.js"></script>
 </body>
 
 </html>
