@@ -353,14 +353,6 @@ header {
     }
 }
 
-/* filter toggle */
-.filter.collapsed .group-links {
-    display: none;
-}
-.filter h2 {
-    cursor: pointer;
-}
-
 /* Responsive adjustments */
 .video {
     width: 100%;
