@@ -518,12 +518,17 @@ header {
 .team-media {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 15px;
     margin-top: 20px;
 }
 
 .media {
     text-align: center;
+}
+
+.team-media > .media:nth-child(1) {
+    grid-row: 1 / 3;
 }
 
 .media h4 {
@@ -554,10 +559,32 @@ header {
     padding: 10px;
 }
 
+.media-box.button {
+    min-height: 120px;
+    padding: 10px;
+}
+
 .media-box audio {
     width: 100%;
     max-width: 200px;
 }
+
+.media-box button {
+    border: none;
+    background-color: #1f6f2a;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.media-box button:hover {
+    background-color: #155a22;
+}
+
 
 .media-box p {
     color: #999;
