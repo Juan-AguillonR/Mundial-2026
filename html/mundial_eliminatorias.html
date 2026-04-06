@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase Eliminatoria - Mundial 2026</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/eliminacion.css">
+    
+    <style>
+        :root {
+            --bracket-gap: 20px;
+        }
+
+        
+        .bracket-wrapper {
+            display: flex;
+            flex-direction: column;
+            background: var(--elim-bg);
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .bracket-container {
+            display: flex;
+            min-width: 1200px; 
+            justify-content: space-between;
+            gap: 40px;
+            padding: 20px 0;
+        }
+
+       
+        .bracket-column {
+            display: flex;
+            flex-direction: column;
+            width: 320px; 
+        }
+
+        .bracket-column h3 {
+            color: var(--elim-accent);
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--elim-border);
+            padding-bottom: 10px;
+        }
+
+        
+        #partidos-octavos { display: flex; flex-direction: column; gap: 20px; }
+        
+        #partidos-cuartos { 
+            display: flex; flex-direction: column; 
+            justify-content: space-around; 
+            height: 100%; 
+            padding: 60px 0;
+            gap: 150px;
+        }
+
+        #partidos-semis { 
+            display: flex; flex-direction: column; 
+            justify-content: space-around; 
+            height: 100%; 
+            padding: 150px 0;
+            gap: 300px;
+        }
+
+        #partido-final { 
+            display: flex; flex-direction: column; 
+            justify-content: center; 
+            height: 100%;
+        }
+
+        
+        .bronce-section {
+            margin-top: 50px;
+            border-top: 2px dashed var(--elim-border);
+            padding-top: 30px;
+        }
+
+        
+        @media (max-width: 1024px) {
+            .bracket-container {
+                flex-direction: column;
+                min-width: auto;
+                align-items: center;
+                gap: 50px;
+            }
+            .bracket-column {
+                width: 100%;
+                max-width: 500px;
+            }
+            #partidos-cuartos, #partidos-semis, #partido-final {
+                padding: 0;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mundial FIFA 2026</h1>
+        <p>Fase de Eliminación Directa</p>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/html/Mundial2026Grupos.html">Grupos</a></li>
+                <li><a href="/html/informacionEquipos.html">Equipos</a></li>
+                <li><a href="/html/mundial_eliminatorias.html">Llaves</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="fase-main">
+        <div class="bracket-wrapper">
+            <div class="bracket-container">
+                
+                <div class="bracket-column">
+                    <h3>Octavos de Final</h3>
+                    <div id="partidos-octavos" class="partidos-render"></div>
+                </div>
+
+                <div class="bracket-column">
+                    <h3>Cuartos de Final</h3>
+                    <div id="partidos-cuartos" class="partidos-render"></div>
+                </div>
+
+                <div class="bracket-column">
+                    <h3>Semifinales</h3>
+                    <div id="partidos-semis" class="partidos-render"></div>
+                </div>
+
+                <div class="bracket-column">
+                    <h3>Gran Final</h3>
+                    <div id="partido-final" class="partidos-render"></div>
+                </div>
+
+            </div>
+
+            <section class="bronce-section">
+                <div class="fase-hero fase-hero--bronce">
+                    <div class="fase-hero-content">
+                        <span class="fase-badge fase-badge--bronce">Duelo por el Honor</span>
+                        <h2 class="fase-titulo">Tercer Puesto</h2>
+                    </div>
+                </div>
+                <div id="partido-bronce" class="partidos-grid--single" style="margin-top: 20px;"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Mundial 2026 – Cristian · Juan Pablo · Emmanuel</p>
+    </footer>
+
+    <script src="/js/datosEliminacion.js"></script>
+    <script src="/js/eliminacion.js"></script>
+    <script>
+        
+        window.onload = () => {
+            renderPartidos('octavos', 'partidos-octavos');
+            renderPartidos('cuartos', 'partidos-cuartos');
+            renderPartidos('semis',    'partidos-semis');
+            renderPartidos('final',    'partido-final');
+            renderPartidos('bronce',   'partido-bronce');
+        };
+    </script>
+</body>
+</html>
