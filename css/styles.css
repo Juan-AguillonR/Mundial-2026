@@ -630,19 +630,27 @@ header {
     padding: 0;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, minmax(120px, 1fr));
-    gap: 6px 24px;
-    max-width: 340px;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 8px 32px;
+    max-width: 400px;
+    border: #43d655 1px solid;
+    box-shadow: #094e11 0px 2px 8px;
 }
 
 .player-list li {
-    padding: 4px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 6px 12px;
     text-align: left;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
 }
 
-.player-list .role {
+.player-list li:hover {
+    background-color: #efffd2;
+    border: #000000 1px solid;
     font-weight: bold;
-    color: #1f6f2a;
-    margin-right: 6px;
+    font-size: 13px;
 }
-
