@@ -628,9 +628,35 @@ tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
 
 .team-media-players { display: block; }
 
-.player-list { list-style: none; padding: 0; margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); gap: 6px 20px; max-width: 340px; }
-.player-list li { padding: 4px 0; text-align: left; font-size: 0.88rem; color: var(--grey-light); border-bottom: 1px solid rgba(255,255,255,0.04); }
-.player-list .role { font-weight: 800; color: var(--green); margin-right: 6px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.player-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 8px 32px;
+    max-width: 400px;
+    border: #ca3e3e 3px solid;
+    box-shadow: #094e11 0px 2px 8px;
+}
+
+.player-list li {
+    padding: 6px 12px;
+    text-align: left;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.player-list li:hover {
+    color: black;
+    background-color: #746c7e;
+    border: #000000 1px solid;
+    font-weight: bold;
+    font-size: 18px;
+}
 
 /* ══ FOOTER ══ */
 footer {
@@ -658,7 +684,7 @@ footer::before {
   color: rgba(245,197,24,0.3);
 }
 
-/* ══ RESPONSIVE ══ */
+/* ══ RESPONSIVE a tamaño 768px ══ */
 @media (max-width: 768px) {
   body { padding: 12px; }
   header { padding: 24px 20px; }
