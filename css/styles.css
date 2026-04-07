@@ -158,13 +158,7 @@ header p {
 }
 
 .navbar a::after {
-  content: '';
-  position: absolute;
-  top: -50%; left: -75%;
-  width: 50%; height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-  transform: skewX(-20deg);
-  transition: left 0.5s;
+  content: none;
 }
 
 .navbar a:hover {
@@ -174,7 +168,6 @@ header p {
   transform: translateY(-3px);
 }
 .navbar a:hover::before { opacity: 1; }
-.navbar a:hover::after  { left: 125%; }
 
 /* ══ HAMBURGER ══ */
 .hamburger {

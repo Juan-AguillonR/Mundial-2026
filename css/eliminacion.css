@@ -272,3 +272,113 @@
 .fase-hero--final .deco-num {
   color: rgba(245,197,24,0.18);
 }
+
+/* ─── Cuerpo de la tarjeta ─── */
+.partido-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ─── Fila de equipo ─── */
+.equipo-fila {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+}
+
+.equipo-fila__bandera {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.equipo-fila__nombre {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--elim-text);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Controles: − número + pegados al extremo derecho */
+.equipo-fila__control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.equipo-fila__goles {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--elim-accent);
+  line-height: 1;
+  min-width: 28px;
+  text-align: center;
+  text-shadow: 0 0 16px rgba(245,197,24,0.4);
+}
+
+/* ─── Botones + / − ─── */
+.btn-gol {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-mas {
+  background: var(--elim-green);
+  color: #fff;
+  box-shadow: 0 0 8px rgba(0,168,107,0.45);
+}
+.btn-mas:hover {
+  background: #00c47d;
+  transform: scale(1.15);
+  box-shadow: 0 0 14px rgba(0,168,107,0.7);
+}
+
+.btn-menos {
+  background: rgba(255,255,255,0.08);
+  color: var(--elim-text-dim);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+.btn-menos:hover {
+  background: rgba(220,50,50,0.22);
+  color: #ff6b6b;
+  border-color: rgba(220,50,50,0.4);
+  transform: scale(1.15);
+}
+.btn-gol:active { transform: scale(0.92); }
+
+/* ─── Ganador resaltado ─── */
+.equipo-fila--ganador .equipo-fila__nombre {
+  color: var(--elim-accent);
+}
+.equipo-fila--ganador .equipo-fila__goles {
+  color: var(--elim-green);
+  text-shadow: 0 0 20px rgba(0,168,107,0.6);
+}
+.equipo-fila--ganador .btn-mas {
+  background: var(--elim-accent);
+  box-shadow: 0 0 10px rgba(245,197,24,0.5);
+}

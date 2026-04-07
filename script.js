@@ -27,6 +27,7 @@ if (hamburger && navbar) {
 /* 2. HEADER SCROLLED */
 const filter = document.querySelector('.filter');
 window.addEventListener('scroll', function () {
+  if (!filter) return;
   if (window.scrollY > 50) filter.classList.add('scrolled');
   else                      filter.classList.remove('scrolled');
 });
