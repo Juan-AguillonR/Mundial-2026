@@ -839,6 +839,8 @@
 
     </main>
 
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">🏆</button>
+
     <footer>
         <p>&copy; Mundial 2026 - | Cristian - Juan Pablo - Emmanuel</p>
     </footer>
@@ -860,6 +862,25 @@
                 }
                 filterHead.addEventListener('click', () => {
                     filter.classList.toggle('collapsed');
+                });
+            }
+
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (scrollToTopBtn) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 300) {
+                        scrollToTopBtn.classList.add('show');
+                    } else {
+                        scrollToTopBtn.classList.remove('show');
+                    }
+                });
+
+                scrollToTopBtn.addEventListener('click', function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 });
             }
         });

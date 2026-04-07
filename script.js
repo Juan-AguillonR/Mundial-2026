@@ -30,3 +30,22 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > 50) filter.classList.add('scrolled');
   else                      filter.classList.remove('scrolled');
 });
+
+/* 3. SCROLL TO TOP BUTTON */
+const scrollToTopBtn = document.getElementById('scrollToTop');
+if (scrollToTopBtn) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
